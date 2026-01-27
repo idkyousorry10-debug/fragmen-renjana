@@ -1,54 +1,63 @@
 :root {
-    --soft-pink: #fdf2f2;
-    --pure-white: #ffffff;
-    --deep-brown: #5d5454;
-    --accent-pink: #f0b4b4;
-    --cream-light: #f9f5f0;
+    --primary: #f8e1e7;
+    --accent: #f0b4b4;
+    --text: #5d5454;
+    --bg: #fff9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--soft-pink);
-    color: var(--deep-brown);
     font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background-image: radial-gradient(#f0b4b4 0.5px, transparent 0.5px);
+    background-size: 20px 20px; /* Pola bintik halus estetik */
 }
 
 .container {
     max-width: 600px;
-    margin: 80px auto;
-    padding: 0 20px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+    color: var(--accent);
     letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+header h1::after {
+    content: ' ✿'; /* Hiasan bunga kecil */
+    font-size: 1.5rem;
 }
 
 .subtitle {
-    font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1rem;
-    color: var(--accent-pink);
-    opacity: 0.9;
+    opacity: 0.7;
+    font-size: 0.9rem;
 }
 
+/* Kartu Postingan */
 .post {
-    background: var(--pure-white);
-    padding: 40px;
-    border-radius: 30px;
-    margin-bottom: 50px;
-    box-shadow: 0 15px 35px rgba(240, 180, 180, 0.2);
-    border: 1px solid var(--cream-light);
+    background: white;
+    padding: 30px;
+    border-radius: 30px; /* Lebih bulat & cute */
+    margin-bottom: 30px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 10px 20px rgba(240, 180, 180, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -60,36 +69,45 @@ header h1 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--accent-pink);
+    color: var(--accent);
     font-weight: 600;
 }
 
-.post h2 {
+h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
     margin: 15px 0;
-    font-weight: 500;
-}
-
-.post p {
-    font-size: 1rem;
-    color: var(--deep-brown);
-    opacity: 0.85;
+    font-size: 1.8rem;
+    color: #4a4444;
 }
 
 .read-more {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    color: var(--accent-pink);
+    color: var(--accent);
     font-weight: 600;
     font-size: 0.85rem;
+    border-bottom: 2px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.read-more:hover {
+    color: #d89696;
+    letter-spacing: 1px;
+}
+
+/* Footer & Identitas Blog */
+.blog-identity {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
 }
 
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 0.8rem;
-    color: var(--accent-pink);
-    letter-spacing: 1px;
+    opacity: 0.6;
 }
