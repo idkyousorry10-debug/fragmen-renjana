@@ -7,28 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* CSS Khusus Efek Halaman */
         .post {
             position: relative;
             overflow: hidden;
-            min-height: 300px;
+            min-height: 280px;
         }
         .page-content {
             position: absolute;
             top: 0;
-            left: 100%; /* Sembunyi di kanan */
+            left: 100%; 
             width: 100%;
             height: 100%;
             background: #ffffff;
-            padding: 40px;
+            padding: 30px;
             box-sizing: border-box;
-            transition: left 0.5s ease-in-out;
+            transition: left 0.4s ease-in-out;
             z-index: 2;
             overflow-y: auto;
         }
         .trigger-check { display: none; }
         .trigger-check:checked ~ .page-content {
-            left: 0; /* Pindah ke depan (halaman baru) */
+            left: 0;
         }
         .btn-open {
             display: inline-block;
@@ -36,17 +35,20 @@
             color: #f0b4b4;
             font-weight: 600;
             cursor: pointer;
-            text-decoration: underline;
+            font-size: 0.9rem;
         }
         .btn-close {
             display: inline-block;
             margin-bottom: 20px;
-            color: #5d5454;
-            font-size: 0.8rem;
+            color: #f0b4b4;
+            font-weight: 600;
             cursor: pointer;
-            opacity: 0.6;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .summary { opacity: 0.8; margin-top: 10px; }
+        .summary { opacity: 0.7; font-style: italic; margin-top: 10px; font-size: 0.95rem; }
+        .content-text p { margin-bottom: 15px; font-size: 1rem; line-height: 1.8; color: #5d5454; }
     </style>
 </head>
 <body>
@@ -67,10 +69,13 @@
                     <label for="p1" class="btn-open">Baca selengkapnya →</label>
                 </div>
                 <div class="page-content">
-                    <label for="p1" class="btn-close">← Kembali ke Beranda</label>
-                    <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, mengisi keheningan orang lain, namun tidak pernah ada yang benar-benar bertanya bagaimana keadaan mesin di dalamnya.</p>
-                    <p>Di sekolah baru ini, aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku. Lidahku kelu, dan saat bicara semuanya mendadak belibet.</p>
-                    <p>Lalu ada mereka, teman lama yang seolah lupa daratan. Mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu. Sekarang, aku hanya punya jemari ini untuk bercerita.</p>
+                    <label for="p1" class="btn-close">← Kembali</label>
+                    <div class="content-text">
+                        <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, ada untuk mengisi keheningan orang lain, namun tidak pernah ada yang benar-benar bertanya bagaimana keadaan mesin di dalamnya. Aku tumbuh menjadi pendengar yang baik bagi semua orang, namun ironisnya, aku tidak pernah punya tempat untuk sekadar meletakkan lelahku sendiri.</p>
+                        <p>Ada keganjilan yang menyakitkan tiap kali aku mencoba bersuara. Di dalam kepalaku, kata-kata adalah samudera yang luas, namun saat harus melewati bibir, semuanya mendadak surut dan belibet. Aku sering terjebak dalam kalimatku sendiri, membuatku tampak payah, padahal sebenarnya aku hanya terlalu takut untuk salah bicara di depan mata-mata yang selalu siap menghakimi.</p>
+                        <p>Di jenjang sekolah yang baru ini, keadaannya malah semakin mencekik. Aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku yang memang sudah rapuh sejak lama. Aku adalah orang asing yang berjalan di koridor dengan napas yang tertahan, berharap bisa menghilang sebelum ada yang menyadari keberadaanku.</p>
+                        <p>Lalu ada mereka, teman-teman lama yang dulu berjanji akan selalu ada. Kini, mereka punya dunia yang baru, teman-teman yang mungkin lebih seru dan lebih sempurna dariku. Aku melihat mereka tertawa lewat layar ponsel, melangkah jauh meninggalkanku yang masih terjebak di tempat yang sama. Istilahnya teman lupa daratan, mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu.</p>
+                    </div>
                 </div>
             </article>
 
@@ -83,9 +88,12 @@
                     <label for="p2" class="btn-open">Baca selengkapnya →</label>
                 </div>
                 <div class="page-content">
-                    <label for="p2" class="btn-close">← Kembali ke Beranda</label>
-                    <p>Dalam satu senja yang kelabu, dia menyerahkan kunci gerbang batinku kepada mereka yang haus akan mangsa. Seketika, aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
-                    <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Ternyata, manusia bisa menjadi begitu buas saat mereka berkelompok dalam penghakiman.</p>
+                    <label for="p2" class="btn-close">← Kembali</label>
+                    <div class="content-text">
+                        <p>Pernah ada suatu masa, di mana langit-langit ruangan terasa begitu rendah, menghimpit napas di antara riuh tawa yang tajam seperti sembilu. Aku berdiri di sana, di tengah lingkaran yang mereka sebut sebagai "takhta", sementara sosok yang tadinya kukira adalah pelabuhan, justru menjadi orang pertama yang menunjuk ke arah lukaku.</p>
+                        <p>Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu, dari telinga yang pernah menampung rahasiamu. Seketika, aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
+                        <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Mereka tidak memukul fisikku, tapi mereka membunuh keberadaanku dengan keheningan yang dipaksakan dan tatapan yang menghakimi. Sejak saat itu, aku belajar satu hal yang amat pedih: bahwa manusia bisa menjadi begitu buas saat mereka berkelompok.</p>
+                    </div>
                 </div>
             </article>
 
@@ -98,9 +106,12 @@
                     <label for="p3" class="btn-open">Baca selengkapnya →</label>
                 </div>
                 <div class="page-content">
-                    <label for="p3" class="btn-close">← Kembali ke Beranda</label>
-                    <p>Aku tumbuh dengan narasi bahwa aku tidak cukup baik, tidak cukup menarik, dan barangkali tidak cukup berharga untuk dicintai. Perasaan insecure ini telah menjadi kulit kedua bagiku.</p>
-                    <p>Di balik tembok rendah diri ini, ada seorang anak kecil yang terus berteriak haus akan pelukan tulus, rindu akan kata-kata yang menenangkan tanpa syarat.</p>
+                    <label for="p3" class="btn-close">← Kembali</label>
+                    <div class="content-text">
+                        <p>Dunia, bagiku, bukan tempat bermain yang ramah. Aku tumbuh dengan narasi bahwa aku tidak cukup baik, tidak cukup menarik, dan barangkali, tidak cukup berharga untuk dicintai. Padahal, aku hanya haus akan pelukan yang tulus...</p>
+                        <p>Kini, aku berdiri di depan cermin dengan mata yang selalu menunduk. Aku merasa seperti anomali—sebuah titik hitam di atas kain yang bersih. Perasaan insecure ini telah menjadi kulit kedua bagiku. Ia membisikkan bahwa aku tidak pantas bersanding dengan siapapun, bahwa kehadiranku adalah beban bagi keindahan orang lain.</p>
+                        <p>Ironisnya, di balik tembok rasa rendah diri yang kubangun setinggi langit ini, ada seorang anak kecil yang terus berteriak. Dia haus akan pelukan yang tulus, rindu akan kata-kata yang menenangkan tanpa ada syarat di baliknya. Aku meronta dalam sepi, ingin sekali dicintai secara utuh.</p>
+                    </div>
                 </div>
             </article>
         </main>
