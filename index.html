@@ -7,32 +7,45 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Tambahan CSS khusus untuk fitur Baca Selengkapnya */
-        .post-content {
-            display: none;
-            margin-top: 15px;
+        /* CSS Tambahan untuk Efek Slide */
+        .post {
+            overflow: hidden;
+            position: relative;
+            min-height: 350px;
         }
-        .read-more-state {
-            display: none;
+        .slide-container {
+            display: flex;
+            width: 200%; /* Dua halaman side-by-side */
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .read-more-trigger {
-            cursor: pointer;
+        .slide {
+            width: 50%;
+            padding: 0 5px;
+            flex-shrink: 0;
+        }
+        /* Logika Pindah Slide */
+        .trigger { display: none; }
+        .trigger:checked ~ .slide-container {
+            transform: translateX(-50%);
+        }
+        .btn-slide {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
+            padding: 8px 15px;
+            background: #fdf2f2;
             color: #f0b4b4;
+            border: 1px solid #f0b4b4;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
             font-weight: 600;
-            font-size: 0.85rem;
+        }
+        .btn-back {
+            background: transparent;
+            border: none;
             text-decoration: underline;
-        }
-        .read-more-state:checked ~ .post-content {
+            margin-top: 20px;
             display: block;
-        }
-        .read-more-state:checked ~ .read-more-trigger {
-            display: none;
-        }
-        .summary-text {
-            font-style: italic;
-            opacity: 0.7;
         }
     </style>
 </head>
@@ -46,61 +59,39 @@
 
         <main>
             <article class="post">
-                <span class="date">28 Januari 2026</span>
-                <h2>Luka di Balik Bangku Kayu dan Sebuah Belati Tak Kasat Mata</h2>
-                
-                <p class="summary-text">Tentang sebuah pengkhianatan yang datang dari rumah yang kukira pelabuhan...</p>
-                
-                <input type="checkbox" class="read-more-state" id="post-1" />
-                
-                <div class="post-content">
-                    <p>Pernah ada suatu masa, di mana langit-langit ruangan terasa begitu rendah, menghimpit napas di antara riuh tawa yang tajam seperti sembilu. Aku berdiri di sana, di tengah lingkaran yang mereka sebut sebagai "takhta", sementara sosok yang tadinya kukira adalah pelabuhan, justru menjadi orang pertama yang menunjuk ke arah lukaku.</p>
-                    <p>Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu. Dalam satu senja yang kelabu, dia menyerahkan kunci gerbang batinku kepada mereka yang haus akan mangsa.</p>
-                    <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku. Mereka tidak memukul fisikku, tapi mereka membunuh keberadaanku dengan keheningan yang dipaksakan dan tatapan yang menghakimi.</p>
+                <input type="checkbox" id="slide1" class="trigger">
+                <div class="slide-container">
+                    <div class="slide">
+                        <span class="date">28 Jan 2026</span>
+                        <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
+                        <p class="summary-text">Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, namun tidak pernah ada yang bertanya bagaimana keadaan mesin di dalamnya...</p>
+                        <label for="slide1" class="btn-slide">Baca selengkapnya →</label>
+                    </div>
+                    <div class="slide">
+                        <p>Di sekolah baru ini, aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku. Lidahku kelu, dan saat bicara semuanya mendadak belibet.</p>
+                        <p>Teman-teman lama pun seolah lupa daratan. Mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu. Sekarang, aku hanya punya jemari ini untuk bercerita.</p>
+                        <label for="slide1" class="btn-slide btn-back">← Kembali</label>
+                    </div>
                 </div>
-
-                <label for="post-1" class="read-more-trigger">Baca selengkapnya →</label>
             </article>
 
             <article class="post">
-                <span class="date">27 Januari 2026</span>
-                <h2>Fragmen Kaca yang Retak di Tangan Dunia</h2>
-                
-                <p class="summary-text">Selembar kertas yang dijadikan sasaran coretan kebencian, mencoba bertahan di bawah telunjuk yang menghakimi...</p>
-                
-                <input type="checkbox" class="read-more-state" id="post-2" />
-                
-                <div class="post-content">
-                    <p>Dunia, bagiku, bukan tempat bermain yang ramah. Di gedung yang mereka sebut tempat menimba ilmu, tubuhku menjadi sansak bagi tangan-tangan yang merasa lebih perkasa. Setiap ejekan yang terlontar adalah paku-paku kecil yang tertanam dalam.</p>
-                    <p>Namun, yang paling menyesakkan adalah saat aku pulang. Ketika tembok rumah yang seharusnya menjadi benteng, justru ikut runtuh menimpaku. Aku tumbuh besar dengan narasi bahwa aku tidak cukup baik, tidak cukup menarik.</p>
-                    <p>Kini, aku berdiri di depan cermin dengan mata yang selalu menunduk. Perasaan <em>insecure</em> ini telah menjadi kulit kedua bagiku. Aku meronta dalam sepi, ingin sekali dicintai secara utuh, namun ketakutan akan penolakan selalu lebih dulu mematikan langkahku.</p>
+                <input type="checkbox" id="slide2" class="trigger">
+                <div class="slide-container">
+                    <div class="slide">
+                        <span class="date">27 Jan 2026</span>
+                        <h2>Luka di Balik Bangku Kayu</h2>
+                        <p class="summary-text">Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu, dari telinga yang pernah menampung rahasiamu...</p>
+                        <label for="slide2" class="btn-slide">Baca selengkapnya →</label>
+                    </div>
+                    <div class="slide">
+                        <p>Dalam satu senja yang kelabu, dia menyerahkan kunci gerbang batinku kepada mereka yang haus akan mangsa. Aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
+                        <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Ternyata, manusia bisa menjadi begitu buas saat mereka berkelompok.</p>
+                        <label for="slide2" class="btn-slide btn-back">← Kembali</label>
+                    </div>
                 </div>
-
-                <label for="post-2" class="read-more-trigger">Baca selengkapnya →</label>
             </article>
         </main>
-        <article class="post">
-    <span class="date">28 Januari 2026</span>
-    <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
-    
-    <p class="summary-text">Tentang lidah yang kelu dan mereka yang perlahan melupa...</p>
-    
-    <input type="checkbox" class="read-more-state" id="post-3" />
-    
-    <div class="post-content">
-        <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, ada untuk mengisi keheningan orang lain, namun tidak pernah ada yang benar-benar bertanya bagaimana keadaan mesin di dalamnya. Aku tumbuh menjadi pendengar yang baik bagi semua orang, namun ironisnya, aku tidak pernah punya tempat untuk sekadar meletakkan lelahku sendiri.</p>
-
-        <p>Ada keganjilan yang menyakitkan tiap kali aku mencoba bersuara. Di dalam kepalaku, kata-kata adalah samudera yang luas, namun saat harus melewati bibir, semuanya mendadak surut dan belibet. Aku sering terjebak dalam kalimatku sendiri, membuatku tampak payah, padahal sebenarnya aku hanya terlalu takut untuk salah bicara di depan mata-mata yang selalu siap menghakimi.</p>
-
-        <p>Di jenjang sekolah yang baru ini, keadaannya malah semakin mencekik. Aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku yang memang sudah rapuh sejak lama. Aku adalah orang asing yang berjalan di koridor dengan napas yang tertahan, berharap bisa menghilang sebelum ada yang menyadari keberadaanku.</p>
-
-        <p>Lalu ada mereka, teman-teman lama yang dulu berjanji akan selalu ada. Kini, mereka punya dunia yang baru, teman-teman yang mungkin lebih seru dan lebih sempurna dariku. Aku melihat mereka tertawa lewat layar ponsel, melangkah jauh meninggalkanku yang masih terjebak di tempat yang sama. Istilahnya teman lupa daratan, mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu.</p>
-
-        <p>Sekarang, aku hanya punya jemari ini untuk bercerita. Di sini, di blog ini, aku tidak perlu takut bicara belibet. Di sini, aku tidak perlu takut dilupakan karena setidaknya aku sedang mencoba untuk tidak melupakan diriku sendiri.</p>
-    </div>
-
-    <label for="post-3" class="read-more-trigger">Baca selengkapnya →</label>
-</article>
 
         <footer>
             <p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila.</p>
