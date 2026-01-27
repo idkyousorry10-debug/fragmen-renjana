@@ -7,46 +7,46 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* CSS Tambahan untuk Efek Slide */
+        /* CSS Khusus Efek Halaman */
         .post {
-            overflow: hidden;
             position: relative;
-            min-height: 350px;
+            overflow: hidden;
+            min-height: 300px;
         }
-        .slide-container {
-            display: flex;
-            width: 200%; /* Dua halaman side-by-side */
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        .page-content {
+            position: absolute;
+            top: 0;
+            left: 100%; /* Sembunyi di kanan */
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            padding: 40px;
+            box-sizing: border-box;
+            transition: left 0.5s ease-in-out;
+            z-index: 2;
+            overflow-y: auto;
         }
-        .slide {
-            width: 50%;
-            padding: 0 5px;
-            flex-shrink: 0;
+        .trigger-check { display: none; }
+        .trigger-check:checked ~ .page-content {
+            left: 0; /* Pindah ke depan (halaman baru) */
         }
-        /* Logika Pindah Slide */
-        .trigger { display: none; }
-        .trigger:checked ~ .slide-container {
-            transform: translateX(-50%);
-        }
-        .btn-slide {
+        .btn-open {
             display: inline-block;
-            margin-top: 25px;
-            padding: 8px 15px;
-            background: #fdf2f2;
-            color: #f0b4b4;
-            border: 1px solid #f0b4b4;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .btn-back {
-            background: transparent;
-            border: none;
-            text-decoration: underline;
             margin-top: 20px;
-            display: block;
+            color: #f0b4b4;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
         }
+        .btn-close {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #5d5454;
+            font-size: 0.8rem;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        .summary { opacity: 0.8; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -59,36 +59,48 @@
 
         <main>
             <article class="post">
-                <input type="checkbox" id="slide1" class="trigger">
-                <div class="slide-container">
-                    <div class="slide">
-                        <span class="date">28 Jan 2026</span>
-                        <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
-                        <p class="summary-text">Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, namun tidak pernah ada yang bertanya bagaimana keadaan mesin di dalamnya...</p>
-                        <label for="slide1" class="btn-slide">Baca selengkapnya →</label>
-                    </div>
-                    <div class="slide">
-                        <p>Di sekolah baru ini, aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku. Lidahku kelu, dan saat bicara semuanya mendadak belibet.</p>
-                        <p>Teman-teman lama pun seolah lupa daratan. Mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu. Sekarang, aku hanya punya jemari ini untuk bercerita.</p>
-                        <label for="slide1" class="btn-slide btn-back">← Kembali</label>
-                    </div>
+                <input type="checkbox" id="p1" class="trigger-check">
+                <div class="intro">
+                    <span class="date">28 Jan 2026</span>
+                    <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
+                    <p class="summary">Tentang lidah yang kelu dan mereka yang perlahan melupa...</p>
+                    <label for="p1" class="btn-open">Baca selengkapnya →</label>
+                </div>
+                <div class="page-content">
+                    <label for="p1" class="btn-close">← Kembali ke Beranda</label>
+                    <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, mengisi keheningan orang lain, namun tidak pernah ada yang benar-benar bertanya bagaimana keadaan mesin di dalamnya.</p>
+                    <p>Di sekolah baru ini, aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku. Lidahku kelu, dan saat bicara semuanya mendadak belibet.</p>
+                    <p>Lalu ada mereka, teman lama yang seolah lupa daratan. Mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu. Sekarang, aku hanya punya jemari ini untuk bercerita.</p>
                 </div>
             </article>
 
             <article class="post">
-                <input type="checkbox" id="slide2" class="trigger">
-                <div class="slide-container">
-                    <div class="slide">
-                        <span class="date">27 Jan 2026</span>
-                        <h2>Luka di Balik Bangku Kayu</h2>
-                        <p class="summary-text">Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu, dari telinga yang pernah menampung rahasiamu...</p>
-                        <label for="slide2" class="btn-slide">Baca selengkapnya →</label>
-                    </div>
-                    <div class="slide">
-                        <p>Dalam satu senja yang kelabu, dia menyerahkan kunci gerbang batinku kepada mereka yang haus akan mangsa. Aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
-                        <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Ternyata, manusia bisa menjadi begitu buas saat mereka berkelompok.</p>
-                        <label for="slide2" class="btn-slide btn-back">← Kembali</label>
-                    </div>
+                <input type="checkbox" id="p2" class="trigger-check">
+                <div class="intro">
+                    <span class="date">27 Jan 2026</span>
+                    <h2>Luka di Balik Bangku Kayu</h2>
+                    <p class="summary">Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu...</p>
+                    <label for="p2" class="btn-open">Baca selengkapnya →</label>
+                </div>
+                <div class="page-content">
+                    <label for="p2" class="btn-close">← Kembali ke Beranda</label>
+                    <p>Dalam satu senja yang kelabu, dia menyerahkan kunci gerbang batinku kepada mereka yang haus akan mangsa. Seketika, aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
+                    <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Ternyata, manusia bisa menjadi begitu buas saat mereka berkelompok dalam penghakiman.</p>
+                </div>
+            </article>
+
+            <article class="post">
+                <input type="checkbox" id="p3" class="trigger-check">
+                <div class="intro">
+                    <span class="date">26 Jan 2026</span>
+                    <h2>Fragmen Kaca yang Retak</h2>
+                    <p class="summary">Dunia bukan tempat bermain yang ramah bagi jiwa yang rapuh...</p>
+                    <label for="p3" class="btn-open">Baca selengkapnya →</label>
+                </div>
+                <div class="page-content">
+                    <label for="p3" class="btn-close">← Kembali ke Beranda</label>
+                    <p>Aku tumbuh dengan narasi bahwa aku tidak cukup baik, tidak cukup menarik, dan barangkali tidak cukup berharga untuk dicintai. Perasaan insecure ini telah menjadi kulit kedua bagiku.</p>
+                    <p>Di balik tembok rendah diri ini, ada seorang anak kecil yang terus berteriak haus akan pelukan tulus, rindu akan kata-kata yang menenangkan tanpa syarat.</p>
                 </div>
             </article>
         </main>
