@@ -6,71 +6,8 @@
     <title>Fragmen Renjana | Arsip Rasa</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        /* Desain Halaman Penuh (Fullscreen Overlay) */
-        .full-page {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #ffffff;
-            z-index: 999;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-y: auto;
-            padding: 40px 25px;
-            box-sizing: border-box;
-        }
-
-        /* Trigger untuk Membuka Halaman */
-        .trigger-check { display: none; }
-        .trigger-check:checked + .full-page {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* Tombol Kembali yang Estetik */
-        .back-nav {
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #f0b4b4;
-            font-weight: 600;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
-
-        .post-title-detail {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .content-body p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: #5d5454;
-        }
-
-        .btn-read {
-            display: inline-block;
-            margin-top: 15px;
-            color: #f0b4b4;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-
     <div class="container">
         <header>
             <h1>Fragmen Renjana</h1>
@@ -81,86 +18,33 @@
             <article class="post">
                 <span class="date">28 Jan 2026</span>
                 <h2>Antara Riuh Organisasi dan Senyapnya Pesan</h2>
-                <p>Ada sebuah nama yang mendadak menjadi magnet di antara tumpukan berkas dan riuh diskusi organisasi...</p>
-                
-                <label for="t4" class="btn-read">Baca selengkapnya →</label>
-                
-                <input type="checkbox" id="t4" class="trigger-check">
-                <div class="full-page">
-                    <label for="t4" class="back-nav">← Kembali ke Beranda</label>
-                    <h2 class="post-title-detail">Antara Riuh Organisasi dan Senyapnya Pesan</h2>
-                    <div class="content-body">
-                        <p>Ada sebuah nama yang mendadak menjadi magnet di antara tumpukan berkas dan riuh diskusi organisasi. Di tengah ruangan yang penuh dengan rencana dan instruksi, mataku seringkali kehilangan fokus, justru terpaku pada bagaimana ia berbicara atau sekadar bagaimana jemarinya mengetuk meja. Mengaguminya adalah pekerjaan sampingan yang paling menyita waktu di sela-sela kesibukan sekolah.</p>
-                        <p>Ia seperti sebuah rasi bintang yang hanya bisa kupandang dari jauh. Tidak pernah ada keberanian yang cukup kuat untuk melangkah mendekat, apalagi untuk sekadar menyapa dengan suara yang tidak bergetar. Maka, aku memilih jalan yang paling sunyi, yaitu melalui bilah layar yang berpendar di tengah malam.</p>
-                        <p>Aku pernah mencoba menyusun keberanian menjadi barisan kata dalam pesan singkat. Sebuah modus yang kusamarkan sedemikian rupa, berharap ada percakapan yang tumbuh dari sana. Namun, semesta tampaknya lebih suka melihatku dalam diam. Pesan itu hanya berakhir menjadi tumpukan teks yang tak pernah mendapat sambutan hangat, meninggalkan aku dengan sisa-sisa harapan yang mendadak hambar.</p>
-                        <p>Ternyata, ada jarak yang tidak bisa dipangkas hanya dengan sinyal. Ada kekaguman yang memang ditakdirkan untuk tetap menjadi rahasia, tersimpan rapi di balik seragam dan ruang organisasi yang dingin. Aku tidak menyesal, karena bagiku, melihatnya dari kejauhan sudah cukup untuk membuat hari-hari sekolah yang berat ini terasa sedikit lebih berwarna.</p>
-                    </div>
-                </div>
+                <p>Ada sebuah nama yang mendadak menjadi magnet di antara tumpukan berkas dan riuh diskusi...</p>
+                <a href="cinta-monyet.html" class="read-more">Baca Halaman Lengkap →</a>
             </article>
 
             <article class="post">
                 <span class="date">28 Jan 2026</span>
                 <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
-                <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, namun tak pernah ada yang bertanya...</p>
-                
-                <label for="t1" class="btn-read">Baca selengkapnya →</label>
-                
-                <input type="checkbox" id="t1" class="trigger-check">
-                <div class="full-page">
-                    <label for="t1" class="back-nav">← Kembali ke Beranda</label>
-                    <h2 class="post-title-detail">Menjadi Pendengar yang Tak Pernah Didengar</h2>
-                    <div class="content-body">
-                        <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan, ada untuk mengisi keheningan orang lain, namun tidak pernah ada yang benar-benar bertanya bagaimana keadaan mesin di dalamnya. Aku tumbuh menjadi pendengar yang baik bagi semua orang, namun ironisnya, aku tidak pernah punya tempat untuk sekadar meletakkan lelahku sendiri.</p>
-                        <p>Ada keganjilan yang menyakitkan tiap kali aku mencoba bersuara. Di dalam kepalaku, kata-kata adalah samudera yang luas, namun saat harus melewati bibir, semuanya mendadak surut dan belibet. Aku sering terjebak dalam kalimatku sendiri, membuatku tampak payah, padahal sebenarnya aku hanya terlalu takut untuk salah bicara di depan mata-mata yang selalu siap menghakimi.</p>
-                        <p>Di jenjang sekolah yang baru ini, keadaannya malah semakin mencekik. Aku bukan sekadar tidak punya teman, aku justru menjadi sasaran. Bully yang mereka lakukan perlahan-lahan mengikis apa yang tersisa dari kepercayaan diriku yang memang sudah rapuh sejak lama. Aku adalah orang asing yang berjalan di koridor dengan napas yang tertahan, berharap bisa menghilang sebelum ada yang menyadari keberadaanku.</p>
-                        <p>Lalu ada mereka, teman-teman lama yang dulu berjanji akan selalu ada. Kini, mereka punya dunia yang baru, teman-teman yang mungkin lebih seru dan lebih sempurna dariku. Aku melihat mereka tertawa lewat layar ponsel, melangkah jauh meninggalkanku yang masih terjebak di tempat yang sama. Istilahnya teman lupa daratan, mereka terbang terlalu tinggi hingga tidak lagi bisa melihat seseorang yang pernah berbagi payung saat hujan dulu.</p>
-                    </div>
-                </div>
+                <p>Aku sering kali merasa seperti sebuah kotak musik tua. Aku ada untuk dimainkan...</p>
+                <a href="kesepian.html" class="read-more">Baca Halaman Lengkap →</a>
             </article>
 
             <article class="post">
                 <span class="date">27 Jan 2026</span>
                 <h2>Luka di Balik Bangku Kayu</h2>
                 <p>Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu...</p>
-                
-                <label for="t2" class="btn-read">Baca selengkapnya →</label>
-                
-                <input type="checkbox" id="t2" class="trigger-check">
-                <div class="full-page">
-                    <label for="t2" class="back-nav">← Kembali ke Beranda</label>
-                    <h2 class="post-title-detail">Luka di Balik Bangku Kayu</h2>
-                    <div class="content-body">
-                        <p>Pernah ada suatu masa, di mana langit-langit ruangan terasa begitu rendah, menghimpit napas di antara riuh tawa yang tajam seperti sembilu. Aku berdiri di sana, di tengah lingkaran yang mereka sebut sebagai "takhta", sementara sosok yang tadinya kukira adalah pelabuhan, justru menjadi orang pertama yang menunjuk ke arah lukaku.</p>
-                        <p>Pengkhianatan tidak pernah datang dari musuh. Ia datang dari tangan yang pernah menggenggam jemarimu, dari telinga yang pernah menampung rahasiamu. Seketika, aku menjadi orang asing di tempat yang setiap hari kupijaki.</p>
-                        <p>Satu per satu suara mulai bersatu, membangun tembok tinggi yang mengucilkanku di tengah keramaian. Mereka tidak memukul fisikku, tapi mereka membunuh keberadaanku dengan keheningan yang dipaksakan dan tatapan yang menghakimi. Sejak saat itu, aku belajar satu hal yang amat pedih: bahwa manusia bisa menjadi begitu buas saat mereka berkelompok.</p>
-                    </div>
-                </div>
+                <a href="pengkhianatan.html" class="read-more">Baca Halaman Lengkap →</a>
             </article>
 
             <article class="post">
                 <span class="date">26 Jan 2026</span>
                 <h2>Fragmen Kaca yang Retak</h2>
-                <p>Dunia bagiku bukan tempat bermain yang ramah. Aku tumbuh dengan narasi bahwa aku tidak cukup baik...</p>
-                
-                <label for="t3" class="btn-read">Baca selengkapnya →</label>
-                
-                <input type="checkbox" id="t3" class="trigger-check">
-                <div class="full-page">
-                    <label for="t3" class="back-nav">← Kembali ke Beranda</label>
-                    <h2 class="post-title-detail">Fragmen Kaca yang Retak</h2>
-                    <div class="content-body">
-                        <p>Dunia, bagiku, bukan tempat bermain yang ramah. Aku tumbuh dengan narasi bahwa aku tidak cukup baik, tidak cukup menarik, dan barangkali, tidak cukup berharga untuk dicintai. Padahal, aku hanya haus akan pelukan yang tulus...</p>
-                        <p>Kini, aku berdiri di depan cermin dengan mata yang selalu menunduk. Aku merasa seperti anomali—sebuah titik hitam di atas kain yang bersih. Perasaan insecure ini telah menjadi kulit kedua bagiku. Ia membisikkan bahwa aku tidak pantas bersanding dengan siapapun, bahwa kehadiranku adalah beban bagi keindahan orang lain.</p>
-                        <p>Ironisnya, di balik tembok rasa rendah diri yang kubangun setinggi langit ini, ada seorang anak kecil yang terus berteriak. Dia haus akan pelukan yang tulus, rindu akan kata-kata yang menenangkan tanpa ada syarat di baliknya. Aku meronta dalam sepi, ingin sekali dicintai secara utuh.</p>
-                    </div>
-                </div>
+                <p>Dunia bagiku bukan tempat bermain yang ramah. Aku tumbuh dengan narasi tidak cukup baik...</p>
+                <a href="insecure.html" class="read-more">Baca Halaman Lengkap →</a>
             </article>
         </main>
 
-        <footer>
-            <p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila.</p>
-        </footer>
+        <footer><p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila.</p></footer>
     </div>
-
 </body>
 </html>
