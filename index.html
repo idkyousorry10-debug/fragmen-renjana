@@ -6,6 +6,42 @@
     <title>Fragmen Renjana | Arsip Rasa</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Tambahan style khusus biar beranda lebih ringkas */
+        .post-link {
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .post-link:hover {
+            padding-left: 10px;
+            background-color: rgba(248, 225, 231, 0.2);
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #4a4444;
+            flex: 1;
+        }
+
+        .post-date {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+
+        .post-container {
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,48 +50,39 @@
             <p class="subtitle">Kepingan rasa yang terserak, mencoba menemukan jalan pulang melalui barisan aksara.</p>
         </header>
 
-        <main>
-            <article class="post" id="post-senja">
-                <span class="date">26 Jan 2026</span>
-                <h2>Jalan Pulang yang Berwarna Jingga</h2>
-                <p>Roda berputar pelan, lagu mengalir seperti doa yang dihafal angin. Langit menurunkan senjanya...</p>
-                <a href="jalan-pulang.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
-            <article class="post" id="post-figuran">
-                <span class="date">23 Jan 2026</span>
-                <h2>Figuran di Bawah Lampu Sekolah</h2>
-                <p>Di lorong yang sama setiap pagi, ada seseorang yang selalu melintas membawa cahaya...</p>
-                <a href="figuran.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
-            <article class="post" id="post-cinta">
-                <span class="date">18 Jan 2026</span>
-                <h2>Antara Riuh Organisasi dan Senyapnya Pesan</h2>
-                <p>Ada sebuah nama yang mendadak menjadi magnet di antara tumpukan berkas...</p>
-                <a href="cinta-monyet.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
+        <main class="post-container">
+            <a href="jalan-pulang.html" class="post-link" id="post-senja">
+                <span class="post-title">Jalan Pulang yang Berwarna Jingga</span>
+                <span class="post-date">26 Jan 2026</span>
+            </a>
 
-            <article class="post" id="post-sepi">
-                <span class="date">13 Jan 2026</span>
-                <h2>Menjadi Pendengar yang Tak Pernah Didengar</h2>
-                <p>Aku sering kali merasa seperti sebuah kotak musik tua...</p>
-                <a href="kesepian.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
+            <a href="figuran.html" class="post-link" id="post-figuran">
+                <span class="post-title">Figuran di Bawah Lampu Sekolah</span>
+                <span class="post-date">21 Jan 2026</span>
+            </a>
 
-            <article class="post" id="post-luka">
-                <span class="date">8 Jan 2026</span>
-                <h2>Luka di Balik Bangku Kayu</h2>
-                <p>Pengkhianatan tidak pernah datang dari musuh...</p>
-                <a href="pengkhianatan.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
+            <a href="cinta-monyet.html" class="post-link" id="post-cinta">
+                <span class="post-title">Antara Riuh Organisasi dan Senyapnya Pesan</span>
+                <span class="post-date">18 Jan 2026</span>
+            </a>
 
-            <article class="post" id="post-kaca">
-                <span class="date">2 Jan 2026</span>
-                <h2>Fragmen Kaca yang Retak</h2>
-                <p>Dunia bagiku bukan tempat bermain yang ramah...</p>
-                <a href="insecure.html" class="read-more">Baca Halaman Lengkap →</a>
-            </article>
+            <a href="kesepian.html" class="post-link" id="post-sepi">
+                <span class="post-title">Menjadi Pendengar yang Tak Pernah Didengar</span>
+                <span class="post-date">12 Jan 2026</span>
+            </a>
+
+            <a href="pengkhianatan.html" class="post-link" id="post-luka">
+                <span class="post-title">Luka di Balik Bangku Kayu</span>
+                <span class="post-date">8 Jan 2026</span>
+            </a>
+
+            <a href="insecure.html" class="post-link" id="post-kaca">
+                <span class="post-title">Fragmen Kaca yang Retak</span>
+                <span class="post-date">2 Jan 2026</span>
+            </a>
         </main>
-        <footer><p>&copy; 2026 Fragmen Renjana dirajut oleh Salsabila Khoerunnisa</p></footer>
+
+        <footer><p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila.</p></footer>
     </div>
 </body>
 </html>
