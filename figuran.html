@@ -6,6 +6,31 @@
     <title>Figuran di Bawah Lampu Sekolah - Fragmen Renjana</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Desain Pemutar Musik Cute */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(240, 180, 180, 0.3);
+            border: 1px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .music-player span {
+            font-size: 0.7rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        iframe {
+            border-radius: 12px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -27,6 +52,11 @@
             </div>
             <div style="margin-top: 50px; text-align: center; opacity: 0.5;">✿ ✿ ✿</div>
         </article>
+    </div>
+
+    <div class="music-player">
+        <span>♫ Mood: Sad Piano</span>
+        <iframe width="40" height="40" src="https://www.youtube.com/embed/uS_v_XInCts?controls=0&amp;autoplay=0" title="Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
     </div>
 </body>
 </html>
