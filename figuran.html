@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Header Pink Tua (Sama dengan Beranda) */
         .story-header {
             background-color: var(--dark-pink);
             color: white;
@@ -25,7 +24,6 @@
             margin: 0;
         }
 
-        /* Navigasi Balik */
         .back-nav {
             margin-bottom: 30px;
         }
@@ -37,14 +35,8 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: opacity 0.3s;
         }
 
-        .back-btn:hover {
-            opacity: 0.7;
-        }
-
-        /* Judul di Tengah */
         .title-center {
             text-align: center;
             font-family: 'Playfair Display', serif;
@@ -54,23 +46,36 @@
             margin-bottom: 40px;
         }
 
-        /* Pengaturan Paragraf Berjarak */
         .content-body p {
-            margin-bottom: 30px; /* Spasi antar paragraf */
+            margin-bottom: 30px; 
             line-height: 2;
             color: #5d5454;
             font-size: 1.1rem;
             text-align: justify;
         }
 
-        /* Hiasan Akhir */
+        /* Style Footer Baru */
+        .story-footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 40px;
+            border-top: 1px solid var(--primary);
+            padding-top: 30px;
+        }
+
+        .story-footer p {
+            font-size: 0.85rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
         .flower-divider {
             text-align: center;
-            margin-top: 50px;
-            padding-bottom: 50px;
+            margin-bottom: 10px;
             color: var(--accent);
             opacity: 0.5;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -97,7 +102,10 @@
             <p>Dan entah kapan, sunyi itu berubah menjadi beban yang pelan-pelan menghabiskan tenaga, membunuh tanpa suara, seperti malam yang terlalu lama tinggal.</p>
         </article>
 
-        <div class="flower-divider">✿</div>
+        <footer class="story-footer">
+            <div class="flower-divider">✿</div>
+            <p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila Khoerunnisa.</p>
+        </footer>
     </div>
 
 </body>
