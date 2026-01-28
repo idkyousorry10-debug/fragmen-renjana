@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jalan Pulang yang Berwarna Jingga - Fragmen Renjana</title>
+    <title>Jalan Pulang - Fragmen Renjana</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        .story-header { background-color: var(--dark-pink); color: white; padding: 25px 20px; text-align: center; border-radius: 0 0 30px 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(216, 150, 150, 0.2); }
+        .story-header { 
+            background-color: var(--dark-pink); 
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center; 
+            border-radius: 0 0 30px 30px; 
+            margin-bottom: 0; /* Kita hapus margin bawahnya di sini */
+            box-shadow: 0 4px 15px rgba(216, 150, 150, 0.2); 
+        }
         .story-header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; letter-spacing: 1px; margin: 0; }
-        .back-nav { margin-bottom: 30px; }
-        .back-btn { text-decoration: none; color: var(--accent); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Navigasi Balik yang sudah diperbaiki jaraknya */
+        .back-nav { 
+            padding: 25px 0; /* Memberi ruang di atas dan bawah tombol */
+            margin-bottom: 10px;
+        }
+        
+        .back-btn { 
+            text-decoration: none; 
+            color: var(--accent); 
+            font-weight: 700; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+        
         .title-center { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #4a4444; line-height: 1.2; margin-bottom: 40px; }
         .content-body p { margin-bottom: 30px; line-height: 2; color: #5d5454; font-size: 1.1rem; text-align: justify; }
         .story-footer { text-align: center; margin-top: 60px; padding-bottom: 40px; border-top: 1px solid var(--primary); padding-top: 30px; }
@@ -20,13 +42,19 @@
 </head>
 <body>
     <header class="story-header"><h2>Fragmen Renjana</h2></header>
-    <div class="container">
-        <div class="back-nav"><a href="index.html#post-senja" class="back-btn">← Kembali ke Beranda</a></div>
+    
+    <div class="container" style="margin-top: 0;">
+        <div class="back-nav">
+            <a href="index.html#post-senja" class="back-btn">← Kembali ke Beranda</a>
+        </div>
+
         <h1 class="title-center">Jalan Pulang yang Berwarna Jingga</h1>
+        
         <article class="content-body">
             <p>Roda berputar pelan, lagu mengalir seperti doa yang dihafal angin. Langit menurunkan senjanya dengan sabar, menaruh cahaya di punggung kota, seolah dunia sedang berbaik hati. Asap tipis dan aroma sore menyatu, membuat jarak terasa lunak, waktu seakan mengalah. Aku melaju di antara warna dan bunyi, membiarkan mata kenyang oleh keindahan yang singgah sebentar lalu pergi.</p>
             <p>Di balik itu, ada ruang yang tak tersentuh cahaya. Ia menyimpan retak seperti porselen lama, halus namun nyata bila disentuh. Udara yang kuhirup tak sama dengan udara di seberang sana, tetapi rasa perih tak perlu alamat untuk tiba. Ia menyusup seperti debu jalanan, melekat di dada, bertahan bahkan ketika senja telah menutup tirai dan lagu menurunkan suaranya.</p>
         </article>
+
         <footer class="story-footer">
             <div class="flower-divider">✿</div>
             <p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila Khoerunnisa.</p>
