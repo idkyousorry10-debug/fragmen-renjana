@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simfoni Gemuruh di Ruang Sunyi - Fragmen Renjana</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .story-header { 
+            background-color: var(--dark-pink); 
+            color: white; 
+            padding: 35px 20px; 
+            text-align: center; 
+            border-radius: 0 0 40px 40px; 
+            box-shadow: 0 4px 15px rgba(216, 150, 150, 0.2); 
+        }
+        
+        .story-header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; letter-spacing: 1px; margin: 0; }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto 50px auto !important; 
+            padding: 0 20px;
+        }
+
+        .back-nav { padding-bottom: 30px; }
+        .back-btn { text-decoration: none; color: var(--accent); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .title-center { 
+            text-align: center; 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.2rem; 
+            color: #4a4444; 
+            line-height: 1.2;
+            margin-bottom: 40px; 
+        }
+
+        .prosa {
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 50px;
+        }
+
+        .prosa p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #5d5454;
+            font-size: 1.05rem;
+        }
+
+        .review-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: #4a4444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #4a4444;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        td { font-size: 0.92rem; line-height: 1.5; color: #666; }
+        .song-name { font-weight: 700; color: var(--dark-pink); }
+
+        .story-footer { 
+            text-align: center; 
+            margin-top: 60px; 
+            padding-bottom: 40px; 
+            border-top: 1px solid var(--primary); 
+            padding-top: 30px; 
+        }
+
+        .story-footer p { font-size: 0.85rem; color: var(--accent); font-style: italic; }
+        .flower-divider { text-align: center; margin-bottom: 10px; color: var(--accent); opacity: 0.5; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <header class="story-header">
+        <h2>Fragmen Renjana</h2>
+    </header>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+        </div>
+
+        <h1 class="title-center">Simfoni Gemuruh di Ruang Sunyi</h1>
+        
+        <div class="prosa">
+            <p>Daftar putar ini adalah sebuah santuari bagi jiwa yang mencari pelepasan di tengah riuh dunia. Dentuman drum yang menghentak dan raungan gitar berdistorsi dari System Of A Down hingga Slipknot tidak hadir sebagai perusak, melainkan sebagai katarsis yang membebaskan. Di sini, setiap jeritan dan tempo yang berpacu menjadi wadah yang jujur untuk merayakan amarah, meluapkan penat, dan mengubah kekacauan di dalam kepala menjadi sebuah bentuk keindahan yang megah.</p>
+            <p>Namun di balik zirah nu-metal yang garang, tersembunyi lorong-lorong kerapuhan yang begitu puitis. Nada-nada dari Linkin Park dan Avenged Sevenfold mengalir bagai gema sunyi tentang pencarian tempat berpulang, sementara selipan melodi seperti Sweet Child O' Mine memberi kehangatan yang hangat dan kontras. Playlist ini bukan sekadar kumpulan lagu bergelombang keras, melainkan sebuah simfoni tentang cara bertahan hidup dan menemukan kedamaian dan harmoni justru di pusat badai yang paling bising.</p>
+        </div>
+
+        <div class="review-section">
+            <h3>Daftar Putar & Review Part 3</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lagu</th>
+                        <th>Kesan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="song-name">Somewhere I Belong, Crawling & Faint</td>
+                        <td>Trilogi pencarian tempat berpulang dari Linkin Park. Menyalurkan rasa frustrasi sekaligus keinginan untuk ditemukan di tengah kegelapan.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">Toxicity & Aerials</td>
+                        <td>Eksplorasi System Of A Down yang megah tentang kekacauan dunia. Mengubah kebingungan menjadi lantunan riff gitar yang magis.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">Psychosocial</td>
+                        <td>Ledakan nu-metal dari Slipknot. Katarsis paling murni saat amarah butuh diluapkan secara utuh tanpa tersisa.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">Sweet Child O' Mine</td>
+                        <td>Sentuhan rock klasik dari Guns N' Roses. Melodi gitarnya memberikan kontras hangat bagai cahaya di tengah badai.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">Mary On A Cross</td>
+                        <td>Gaya vintage-occult dari Ghost yang manis dan adiktif, membawa suasana nostalgia yang unik di dalam playlist.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">The Emptiness Machine & Leave Out All The Rest</td>
+                        <td>Gema emosional Linkin Park melintasi era; tentang menerima kehampaan dan harapan untuk meninggalkan jejak yang baik.</td>
+                    </tr>
+                    <tr>
+                        <td class="song-name">Victim</td>
+                        <td>Alunan melankolis Avenged Sevenfold yang dalam, meratapi luka dan kehilangannya dengan begitu estetik.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="story-footer">
+            <div class="flower-divider">✿</div>
+            <p>&copy; 2026 Fragmen Renjana. Dirajut oleh Salsabila Khoerunnisa.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
